@@ -1,0 +1,23 @@
+﻿<Window x:Class="lab3_entity_framework.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab3_entity_framework"
+        mc:Ignorable="d"
+        Title="EntityFramework" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="neoDgr" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ID_staff}" Header="ID"/>
+                <DataGridTextColumn Binding="{Binding surname}" Header="Фамилия"/>
+                <DataGridTextColumn Binding="{Binding firstname}" Header="Имя"/>
+                <DataGridTextColumn Binding="{Binding middlename}" Header="Отчество"/>
+                <DataGridTextColumn Binding="{Binding email}" Header="Email"/>
+                <DataGridTextColumn Binding="{Binding staffpost.postname}" Header="Должность"/>
+                <DataGridTextColumn Binding="{Binding staffpost.corpus.title}" Header="Название корпуса"/>
+                <DataGridTextColumn Binding="{Binding staffpost.corpus.speciality}" Header="Описание деятельности"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
